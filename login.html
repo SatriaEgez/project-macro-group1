@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select, input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="userType">Pilih Tipe Pengguna:</label>
+            <select id="userType">
+                <option value="admin"></option>
+                <option value="admin">Admin</option>
+                <option value="staf">Staf Akademik</option>
+                <option value="administrasi">Administrasi</option>
+                <option value="wali">Wali Murid</option>
+            </select>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            var userType = document.getElementById("userType").value;
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Di sini Anda dapat menambahkan logika untuk melakukan verifikasi login berdasarkan tipe pengguna
+            // Misalnya, dengan menggunakan AJAX untuk memeriksa kredensial di sisi server.
+
+            // Contoh sederhana: Cek tipe pengguna dan tampilkan pesan sesuai
+            if (userType === "admin") {
+                alert("Selamat datang, Admin!");
+            } else if (userType === "staf") {
+                alert("Selamat datang, Staf Akademik!");
+            } else if (userType === "administrasi") {
+                alert("Selamat datang, Administrasi!");
+            } else if (userType === "wali") {
+                alert("Selamat datang, Wali Murid!");
+            } else {
+                alert("Tipe pengguna tidak valid.");
+            }
+        }
+    </script>
+</body>
+</html>
