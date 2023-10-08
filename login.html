@@ -2,90 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <title>Login |SIM-Akademik</title>
+    <title>SIM Akademik - LOG IN</title>
   </head>
   <body>
-    <!----------------------- Main Container -------------------------->
-
-    <div
-      class="container d-flex justify-content-center align-items-center min-vh-100">
-      <!----------------------- Login Container -------------------------->
-
-      <div class="row border rounded-5 p-3 bg-white shadow box-area">
-        <!--------------------------- Left Box ----------------------------->
-
-        <div
-          class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box"
-          style="background: #fd8701">
-          <div class="featured-image mb-3">
-            <img src="images/1.png" class="img-fluid" style="width: 250px" />
-          </div>
-          <p
-            class="text-white fs-2"
-            style="
-              font-family: 'Courier New', Courier, monospace;
-              font-weight: 600;
-            ">
-            Be Verified
-          </p>
-          <small
-            class="text-white text-wrap text-center"
-            style="width: 17rem; font-family: 'Courier New', Courier, monospace">
-            Join experienced Designers on this platform.
-          </small>
-        </div>
-
-        <!-------------------- ------ Right Box ---------------------------->
-
-        <div class="col-md-6 right-box">
-          <div class="row align-items-center">
-            <div class="header-text mb-4">
-              <h2>LOGIN</h2>
-              <p>SIM-Akademik</p>
+    <section class="login d-flex">
+      <div class="login-left w-50 h-100">
+        <div class="row justify-content-center align-items-center h-100">
+          <div class="col-6">
+            <div class="header">
+              <h1 class="text-center">Login</h1>
+              <h3 class="text-center mt-3">SIM Akademik</h3>
             </div>
-            <div class="input-group mb-3">
+            <div class="login-form">
+              <label for="number" class="form-label">NIS/NIP</label>
               <input
-                type="text"
-                class="form-control form-control-lg bg-light fs-6"
-                placeholder="Email address" />
-            </div>
-            <div class="input-group mb-1">
+                type="number"
+                class="form-control"
+                id="number"
+                placeholder="Masukkan NIS/NIP anda" />
+
+              <label for="Password" class="form-label">Password</label>
               <input
                 type="password"
-                class="form-control form-control-lg bg-light fs-6"
-                placeholder="Password" />
+                class="form-control"
+                id="Password"
+                placeholder="Masukkan Password anda" />
+
+              <label for="radio" class="form-label">Login Sebagai :</label>
             </div>
-            <div class="input-group mb-5 d-flex justify-content-between">
-              <div class="form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="formCheck" />
-                <label for="formCheck" class="form-check-label text-secondary">
-                  <small>admin</small>
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="formCheck" />
-                <label for="formCheck" class="form-check-label text-secondary">
-                  <small>Wali Murid</small>
-                </label>
-              </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1" />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Wali Murid
+              </label>
             </div>
-            <div class="input-group mb-3">
-              <button class="btn btn-lg btn-primary w-100 fs-6" style="background-color: #fd8701;">Login</button>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                checked />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Admin
+              </label>
             </div>
+            <button class="btn btn-primary">LOGIN</button>
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="login-right w-50 h-100">
+        <img src="assets/img/login.png" class="d-block w-100 h-100" alt="..." />
+      </div>
+    </section>
+    <script src="assets/js/bootstrap.min.js"></script>
   </body>
 </html>

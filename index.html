@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIM Akademik</title>
-  </head>
-  <body>
-   
-    <script src="assets/js/bootstrap.min.js"></script>
-  </body>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for sidebar */
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #555;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Jadwal</a>
+        <a href="#">Rapor Siswa</a>
+        <a href="#">Keuangan</a>
+        <a href="#">Log Out</a>
+    </div>
+
+    <div class="content">
+        <!-- Konten halaman utama Anda akan ada di sini -->
+        <h1>Selamat Datang di SIM Akademik</h1>
+        <p>Silakan pilih salah satu fitur di sidebar.</p>
+    </div>
+
+    <!-- Include Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+</body>
 </html>
